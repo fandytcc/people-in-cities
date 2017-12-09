@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root "citizens#index"
-
-  get "citizens" => "citizens#index"
-  get "citizens/:id" => "citizens#show", as: :citizen
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "cities#index"
+  resources :cities
+  resources :citizens
 end
