@@ -1,5 +1,4 @@
 <h1><%= @city.name %></h1>
-<%= image_tag @city.image_url %>
 <h2>List of citizens</h2>
 <% if @city.citizens.any?%>
   <ul style="list-style: none;">
@@ -15,5 +14,5 @@
 <% else %>
   <p>There are no citizens in this city.</p>
 <% end %>
-
-<p> <%= link_to "Delete", city_path(@city.id), method: :delete, data: { confirm: "Are you sure?"} %> </p>
+<p><%= link_to "Edit", edit_city_path(@city.id) %></p>
+<p><%= link_to "Delete", city_path(@city.id), method: :delete, data: { confirm: "Are you sure?"} %> </p>
