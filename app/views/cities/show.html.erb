@@ -1,13 +1,14 @@
-
-  <h1>City Name: <%= @city.name %></h1>
-
-<h4>List of citizens</h4>
+<h1><%= @city.name %></h1>
+<%= image_tag @city.image_url %>
+<h2>List of citizens</h2>
 <% if @city.citizens.any?%>
-  <ul>
+  <ul style="list-style: none;">
     <% @city.citizens.each do |citizen| %>
-      <li><%= citizen.name %></li>
-      <li><%= citizen.age %></li>
-      <li><%= citizen.occupation %></li>
+      <li><h3><%= citizen.name %></h3></li>
+        <ul>
+          <li><%= citizen.age %></li>
+          <li><%= citizen.occupation %></li>
+        </ul>
     <% end %>
   </ul>
 <% else %>
