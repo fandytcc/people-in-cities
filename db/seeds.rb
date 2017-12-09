@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+citizen1 = Citizen.create!( { name: 'Dejan', age: 45, occupation: 'Aspiring developer' } )
+citizen2 = Citizen.create!( { name: 'Fandy', age: 32, occupation: 'A future mom' } )
+citizen3 = Citizen.create!( { name: 'Iskander', age: 25, occupation: 'Almost professional terminal typer' } )
+citizen4 = Citizen.create!( { name: 'Mohammed', age: 31, occupation: 'Aspiring junior developer' } )
