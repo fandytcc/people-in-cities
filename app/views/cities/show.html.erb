@@ -5,9 +5,10 @@
 <% if @city.citizens.any?%>
   <ul>
     <% @city.citizens.each do |citizen| %>
-      <li><%= citizen.name %></li>
-      <li><%= citizen.age %></li>
-      <li><%= citizen.occupation %></li>
+    <p> Citizen</p>
+      <li class="new"><span class="tag">Name:</span> <%= citizen.name %>,
+      <span class="tag">Age:</span> <%= citizen.age %>,
+      <span class="tag">Occupation:</span> <%= citizen.occupation %></li>
     <% end %>
   </ul>
 <% else %>
