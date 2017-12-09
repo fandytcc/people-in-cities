@@ -1,9 +1,12 @@
 <h1><%= @city.name %></h1>
+
+<%= image_tag @city.image_url %>
+
 <h2>List of citizens</h2>
 <% if @city.citizens.any?%>
   <ul style="list-style: none;">
     <% @city.citizens.each do |citizen| %>
-      <p> Citizen</p>
+      <p> Citizen </p>
       <li class="new"><h3><span class="tag">Name: </span><%= citizen.name %></h3></li>
         <ul>
           <li><span class="tag">Age: </span><%= citizen.age %></li>
