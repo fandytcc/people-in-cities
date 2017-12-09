@@ -13,5 +13,5 @@
 <% else %>
   <p>There are no citizens in this city.</p>
 <% end %>
-
-<p> <%= link_to "Delete", city_path(@city.id), method: :delete, data: { confirm: "Are you sure?"} %> </p>
+<p><%= link_to "Edit", edit_city_path(@city.id) %></p>
+<p><%= link_to "Delete", city_path(@city.id), method: :delete, data: { confirm: "Are you sure?"} %> </p>

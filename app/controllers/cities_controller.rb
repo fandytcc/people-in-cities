@@ -12,18 +12,27 @@ class CitiesController < ApplicationController
    @city = City.new
   end
 
- def create
-   @city = City.new(city_params)
-   if @city.save
-     redirect_to @city
-  else
-     render 'new'
-   end
- end
+  def create
+    @city = City.new(city_params)
+    if @city.save
+      redirect_to @city
+    else
+      render 'new'
+    end
+  end
+
+  def edit
+    @city = City.find(params[:id])
+  end
 
   def update
-    @city = City.find.params[:id]
+    @city = City.find(params[:id])
 
+    if @city.update_attributes(city_params)
+      redirect_to @city
+    else
+      render 'edit'
+    end
   end
 
   def destroy

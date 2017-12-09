@@ -1,13 +1,17 @@
 class CitizensController < ApplicationController
+
   def index
     @citizens = Citizen.all
   end
+
   def show
     @citizen = Citizen.find(params[:id])
   end
+
   def new
     @citizen = Citizen.new
   end
+
   def create
     @citizen = Citizen.new(citizen_params)
     if @citizen.save
@@ -16,9 +20,11 @@ class CitizensController < ApplicationController
       render 'new'
     end
   end
+
   def edit
     @citizen = Citizen.find(params[:id])
   end
+
   def update
     @citizen = Citizen.find(params[:id])
 
@@ -28,6 +34,7 @@ class CitizensController < ApplicationController
       render 'edit'
     end
   end
+
   def destroy
     @citizen = Citizen.find(params[:id])
     @citizen.destroy
@@ -39,4 +46,5 @@ class CitizensController < ApplicationController
   def citizen_params
     params.require(:citizen).permit(:name, :age, :occupation, :city_id)
   end
+  
 end
