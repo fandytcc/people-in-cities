@@ -1,0 +1,5 @@
+<h1>Citizens</h1>
+
+<% @citizens.each do |citizen| %>
+  <p><%= link_to citizen.name, citizen_path(citizen.id)%></p>
+<% end %>
