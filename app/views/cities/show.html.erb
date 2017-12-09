@@ -1,1 +1,17 @@
-<h1> <% @city.name %></h1>
+
+  <h1>City Name: <%= @city.name %></h1>
+
+<h4>List of citizens</h4>
+<% if @city.citizens.any?%>
+  <ul>
+    <% @city.citizens.each do |citizen| %>
+      <li><%= citizen.name %></li>
+      <li><%= citizen.age %></li>
+      <li><%= citizen.occupation %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no citizens in this city.</p>
+<% end %>
+
+<p> <%= link_to "Delete", city_path(@city.id), method: :delete, data: { confirm: "Are you sure?"} %> </p>

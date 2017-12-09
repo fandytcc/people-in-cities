@@ -1,0 +1,14 @@
+<%= form_for @city do |f| %>
+
+  <ul>
+    <% @city.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.submit "Create" %>
+
+<% end %>
