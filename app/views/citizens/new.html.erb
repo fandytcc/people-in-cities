@@ -1,0 +1,17 @@
+<h1>New Citizen</h1>
+
+<%= form_for @citizen do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :age %>
+<%= f.number_field :age %>
+
+<%= f.label :occupation %>
+<%= f.text_field :occupation %>
+
+<%= f.label :city_id %>
+<%= f.text_field :city_id %>
+
+<%= f.submit "Create" %>
+<% end %>

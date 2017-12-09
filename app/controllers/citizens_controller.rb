@@ -37,6 +37,6 @@ class CitizensController < ApplicationController
   private
 
   def citizen_params
-    params.require(:citizen).permit(:name, :age, :image_url, :valley_id)
+    params.require(:citizen).permit(:name, :age, :occupation, :city_id)
   end
 end
