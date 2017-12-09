@@ -5,10 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# citizen1 = Citizen.create!( { name: 'Dejan', age: 45, occupation: 'Aspiring developer' } )
-# citizen2 = Citizen.create!( { name: 'Fandy', age: 32, occupation: 'A future mom' } )
-# citizen3 = Citizen.create!( { name: 'Iskander', age: 25, occupation: 'Almost professional terminal typer' } )
-# citizen4 = Citizen.create!( { name: 'Mohammed', age: 31, occupation: 'Aspiring junior developer' } )
+Citizen.destroy_all
+City.destroy_all
 
-city1 = City.create! ({name: "Amsterdam"})
-city2 = City.create! ({name: "Utrecht"})
+amsterdam = City.create! ({name: "Amsterdam"})
+utrecht = City.create! ({name: "Utrecht"})
+
+citizen1 = Citizen.create!( { name: 'Dejan', age: 45, occupation: 'Aspiring developer', city: amsterdam } )
+citizen2 = Citizen.create!( { name: 'Fandy', age: 32, occupation: 'A future mom', city: amsterdam } )
+citizen3 = Citizen.create!( { name: 'Iskander', age: 25, occupation: 'Almost professional terminal typer', city: utrecht } )
+citizen4 = Citizen.create!( { name: 'Mohammed', age: 31, occupation: 'Aspiring junior developer', city: utrecht } )
+#
