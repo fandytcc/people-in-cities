@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root "citizens#index"
+
+  get "citizens" => "citizens#index"
+  get "citizens/:id" => "citizens#show", as: :citizen
 end
