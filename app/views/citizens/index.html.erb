@@ -1,4 +1,5 @@
 <h1>Citizens</h1>
+<hr>
 
 <% @citizens.each do |citizen| %>
 <p><%= link_to citizen.name, citizen_path(citizen.id) %></p>
@@ -6,3 +7,5 @@
 
 <hr>
   <%= link_to "[New Citizen]" , new_citizen_path %>
+
+  
