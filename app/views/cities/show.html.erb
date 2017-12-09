@@ -4,11 +4,12 @@
 <% if @city.citizens.any?%>
   <ul style="list-style: none;">
     <% @city.citizens.each do |citizen| %>
-      <li><h3><%= citizen.name %></h3></li>
+      <p> Citizen</p>
+      <li class="new"><h3><span class="tag">Name: </span><%= citizen.name %></h3></li>
         <ul>
-          <li><%= citizen.age %></li>
-          <li><%= citizen.occupation %></li>
-        </ul>
+          <li><span class="tag">Age: </span><%= citizen.age %></li>
+          <li><span class="tag">Occupation: </span> <%= citizen.occupation %></li>
+       </ul>
     <% end %>
   </ul>
 <% else %>
